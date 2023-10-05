@@ -1,0 +1,113 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts.js" defer></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(2, 2, 18);
+            color: white;
+            text-align: center;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin-top: 1%;
+        }
+        img{
+            width: 40%;
+        }
+        button{
+            border: 5px solid rgb(128, 128, 128);
+            border-bottom: 5px solid white;
+            border-right: 5px solid white;
+            color: rgb(0, 0, 0);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: large;
+            font-weight: 500;
+            transition: 0.5s ease-in-out;
+            margin: 1%;
+        }
+        button:hover{
+            background-color:rgb(25, 25, 25) !important;
+            color: white;
+            transform: scale(1.1);
+        }
+        #rock_button, #scissors_button, #paper_button{
+            background-color: gray;
+            width: 200px;
+            height: 100px;
+        }
+        #start_button{
+            background-color: rgb(71, 71, 71);
+            width: 150px;
+            height: 100px;
+        }
+        /* #options{
+            display: none;
+        } */
+        .box-round{
+            margin:1% 25% 5% 25%;
+            padding: 3%;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+        #message{
+            font-weight: 600;
+            font-size: medium;
+        }
+        .winner{
+            color: rgb(0, 196, 0);
+        }
+        .loser{
+            color: red;
+        }
+        table{
+            margin:auto;
+        }
+        th{padding: 2px 10px;}
+        td{padding: 2px 10px;}
+
+        #scoreboard{display: none;}
+        #announcer_winner{display: none;}
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Rock, Scissors & Paper</h1>
+        <h2>-  Game  -</h2>
+        <br>
+        <!-- <div id="initial">
+            <button id="start_button">Start Game</button>
+            <div class="box-round">
+                <h2>Instructions:</h2>
+                <p>You will play with the COM ilimited rounds of Rock, Scissors and Paper.</p>
+                <p>The first one in win 5 rounds, will win the game. Good Luck!!</p>
+            </div>
+        </div> -->
+        <div id="options">
+            <div>
+                <h3>Round # <span id="round">1</span></h3>
+                <p>Pick one:</p>
+            </div>
+            <button id="rock_button"><img src="../icons/rock.png" alt=""></button>
+            <button id="scissors_button"><img src="../icons/scissors.png" alt=""></button>
+            <button id="paper_button"><img src="../icons/paper.png" alt=""></button>
+            <br>
+            <span id="COM_choise"></span>
+            <br><br>
+            <span id="message" class=""></span>
+        </div>
+        <div id="announcer_winner"></div>
+        <div style="text-align: -webkit-center; margin: 1% 40%;">
+            <h3>Scoreboard:</h3>
+            <table id="scoreboard">
+                <tr>
+                    <th>Round</th>
+                    <th>Player</th>
+                    <th>COM</th>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+</body>
+</html>
